@@ -41,6 +41,9 @@ const SocialLinks = () => {
         </>
       ),
       href: "https://www.linkedin.com/in/kristian-software-engineer/",
+      href: "/CV_Kristian_Contreras.pdf",
+      style: "rounded-br-md",
+      download: true,
     },
     {
       id: 5,
@@ -49,9 +52,7 @@ const SocialLinks = () => {
           YouTube <FaYoutube size={30} />
         </>
       ),
-      href: "/CV_Kristian_Contreras.pdf",
-      style: "rounded-br-md",
-      download: true,
+      href: "https://youtube.com/@kodenow",
     },
   ];
 
