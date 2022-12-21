@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { BsFillFileEarmarkPersonFill } from "react-icons/bs";
 
 const SocialLinks = () => {
   const links = [
@@ -37,12 +37,11 @@ const SocialLinks = () => {
       id: 4,
       child: (
         <>
-          Resume <FaLinkedin size={30} />
+          Resume <BsFillFileEarmarkPersonFill size={30} />
         </>
       ),
       href: "https://www.linkedin.com/in/kristian-software-engineer/",
       href: "/CV_Kristian_Contreras.pdf",
-      style: "rounded-br-md",
       download: true,
     },
     {
@@ -52,6 +51,7 @@ const SocialLinks = () => {
           YouTube <FaYoutube size={30} />
         </>
       ),
+      style: "rounded-br-md",
       href: "https://youtube.com/@kodenow",
     },
   ];
@@ -62,7 +62,7 @@ const SocialLinks = () => {
         {links.map(({ id, child, href, style, download }) => (
           <li
             className={
-              "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" +
+              "flex justify-between items-center w-40 h-14 pl-6 pr-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-orange-500" +
               " " +
               style
             }
