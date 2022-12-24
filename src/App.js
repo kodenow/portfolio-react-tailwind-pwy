@@ -5,16 +5,18 @@ import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Portfolio from "./components/Portfolio";
 import SocialLinks from "./components/SocialLinks";
+import { useState } from "react";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
   return (
-    <div>
-      <NavBar />
-      <Home />
+    <div className={`${darkMode ? "dark" : ""}`}>
+      <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Home darkMode={darkMode} />
       <SocialLinks />
       <About />
-      <Portfolio />
       <Experience />
+      <Portfolio />
       <Contact />
     </div>
   );

@@ -57,18 +57,18 @@ const Experience = () => {
       id: 8,
       src: github,
       title: "GitHub",
-      style: "shadow-gray-400",
+      style: "shadow-gray-200",
     },
   ];
 
   return (
     <div
       name="experience"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-screen"
+      className=" w-full h-screen bg-gradient-to-b from-[#2cc0d2]  via-cyan-200 to-[#2cc0d2]  dark:from-gray-800 dark:via-gray-700 dark:to-gray-800"
     >
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
+      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-[#0b6972] dark:text-white">
         <div>
-          <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline text-orange-400">
+          <p className="text-4xl font-bold border-b-4 p-2 inline border-orange-700 text-[#0b6972] dark:border-gray-500 dark:text-orange-400">
             Experience
           </p>
           <p className="py-6">These are the technologies I've worked with</p>

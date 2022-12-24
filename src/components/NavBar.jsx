@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/KodeNowLogo.png";
 import { Link } from "react-scroll";
+import { BsFillMoonStarsFill } from "react-icons/bs";
 
-const NavBar = () => {
+const NavBar = ({ darkMode, setDarkMode }) => {
   const [nav, setNav] = useState(false);
+  console.log(darkMode);
+  const onButtonClick = (mode) => {
+    console.log("set modde");
+    setDarkMode(mode);
+  };
 
   const links = [
     {
@@ -30,19 +36,23 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 text-white px-14 bg-black fixed">
+    <div className="flex justify-between items-center w-full h-20 text-white px-14 fixed">
       <div>
-        <img src={logo} width={200} height={200} />
+        <img className="stroke-white" src={logo} width={200} height={200} />
       </div>
       <ul className="hidden md:flex">
+        <li>
+          <BsFillMoonStarsFill
+            onClick={() => onButtonClick(!darkMode)}
+            className=" cursor-pointer text-2xl text-black dark:text-white"
+          />
+        </li>
         {links.map(({ id, link }) => (
           <li
             key={id}
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
           >
-            <Link to={link} smooth={500}>
-              {link}
-            </Link>
+            <Link to={link}>{link}</Link>
           </li>
         ))}
       </ul>
